@@ -1,8 +1,6 @@
-#include <SFML/graphics.hpp>
-
-using namespace sf;
+#include <SFML/Graphics.hpp>
 
 int main()
 {
-
+    return 0;
 }
