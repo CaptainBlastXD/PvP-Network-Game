@@ -2,6 +2,7 @@
 #include <SFML/Window.hpp>
 #include <SFML/System.hpp>
 #include <SFML/Audio.hpp>
+#include "Game.h"
 
 using namespace sf;
 
@@ -30,7 +31,6 @@ int main()
 	options.setCharacterSize(100);
 	options.setColor(Color::Red);
 	options.setPosition (OptionsY, OptionsX);
-	
 	Music music;
     if (!music.openFromFile("2.2.wav"))
         return EXIT_FAILURE;
@@ -43,6 +43,15 @@ int main()
                 window.close();
 		}
 		window.clear();
+		if (Keyboard::isKeyPressed(sf::Keyboard::Space))
+		{
+		MyFunc();
+		}
+		else if (Keyboard::isKeyPressed(Keyboard::Escape))
+		{
+			return 0;
+		}
+	
         window.draw(logo);
 		window.draw(play);
 		window.draw(options);
