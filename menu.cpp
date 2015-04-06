@@ -13,7 +13,7 @@ int main()
 	int PlayX = 400;
 	int OptionsY = 801;
 	int OptionsX = 500;
-	RenderWindow window(sf::VideoMode(1920, 1080), "PvP Network");
+	RenderWindow window(VideoMode(1280, 1024), "PvP Network");
 	Font Mfont;
 	Mfont.loadFromFile("28 Days Later.ttf");
 	Text logo("PvP Network", Mfont);
@@ -41,7 +41,6 @@ int main()
             if (event.type == sf::Event::Closed)
                 window.close();
 		}
-		window.clear();
         window.draw(logo);
 		window.draw(play);
 		window.draw(options);
